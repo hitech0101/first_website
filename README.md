@@ -1,5 +1,5 @@
 # first_website
-My first repository on GitHub.
 
 
-Building first webiste using angular.
+
+Building my first webiste using angular.
