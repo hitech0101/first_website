@@ -3,10 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngRoute']);
 
-myApp.controller('mainController', function($scope) {
-    console.log($scope)
+myApp.config(function ($routeProvider){
+    $routeProvider
+            .when('/', {
+               templateUrl: '../html/main.html',
+               controller: 'mainController'
+            })
+            .when('/aboutus', {
+               templateUrl: '../html/aboutus.html',
+               controller: 'secondController'
+            })
+     .when('/contacts', {
+               templateUrl: '../html/contacts.html',
+               controller: 'secondController'
+            })
 });
+
+myApp.controller('mainController', ['$scope',function($scope) {
+    console.log($scope);
+//    $scope.name = 'Hello World!';
+}]);
+myApp.controller('secondController', ['$scope',function($scope) {
+    console.log($scope);
+//    $scope.name = 'Hello Again';
+}]);
 
 

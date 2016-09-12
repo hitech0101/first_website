@@ -16,6 +16,7 @@
         
         <!-- load angular via CDN -->
         <script src="../js/libraries/angular.js"></script>
+        <script src="../js/libraries/angular-route.js"></script>
         <script src="../js/app.js"></script>
     </head>
     <body>
@@ -29,6 +30,8 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+					<li><a href="#aboutus"><i class="fa fa-home"></i> About us</a></li>
+					<li><a href="#contacts"><i class="fa fa-home"></i> Contacts</a></li>
 				</ul>
 			</div>
 			</nav>
@@ -36,9 +39,10 @@
 
         <div class="container">
 
-            <div ng-controller="mainController">
             
-                <h1>Hello world!</h1>
+             <div ng-view>
+            
+                
                 
             </div>
             
