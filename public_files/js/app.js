@@ -13,7 +13,7 @@ myApp.config(function ($routeProvider){
             })
             .when('/aboutus', {
                templateUrl: '../html/aboutus.html',
-               controller: 'secondController'
+               controller: 'mainController'
             })
      .when('/contacts', {
                templateUrl: '../html/contacts.html',
@@ -26,8 +26,8 @@ myApp.controller('mainController', ['$scope',function($scope) {
 //    $scope.name = 'Hello World!';
 }]);
 myApp.controller('secondController', ['$scope',function($scope) {
-    console.log($scope);
-//    $scope.name = 'Hello Again';
+    $scope.handle ='';
+    $scope.characters =5;
 }]);
 
 

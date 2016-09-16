@@ -1,1 +1,9 @@
 <h1>Contacts</h1>
+<h2>Leave a query</h2>
+<div>
+    <label>Enter your name</label>
+    <input type="text" ng-model="handle">
+</div>
+<div class="alert " ng-class="{'alert-danger' : handle.length < characters}" ng-if="handle.length < characters">
+    Must be 5 characters.
+</div>
